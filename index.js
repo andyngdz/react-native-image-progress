@@ -10,6 +10,14 @@ const styles = {
   },
 }
 
+const AbsoluteFillStyle = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+}
+
 const DefaultIndicator = ActivityIndicator;
 
 const getSourceKey = source => (source && source.uri) || String(source);
@@ -177,7 +185,7 @@ export const createImageProgress = ImageComponent =>
             <ImageComponent
               {...props}
               source={source}
-              style={Object.assign({}, StyleSheet.absoluteFill, imageStyle)}
+              style={Object.assign({}, AbsoluteFillStyle, imageStyle)}
             />
             {children}
           </View>
@@ -229,7 +237,7 @@ export const createImageProgress = ImageComponent =>
             onLoad={this.handleLoad}
             onLoadEnd={this.handleLoadEnd}
             source={source}
-            style={Object.assign({}, StyleSheet.absoluteFill, imageStyle)}
+            style={Object.assign({}, AbsoluteFillStyle, imageStyle)}
           />
           {indicatorElement}
           {children}
