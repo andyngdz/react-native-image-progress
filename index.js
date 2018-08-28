@@ -177,7 +177,7 @@ export const createImageProgress = ImageComponent =>
             <ImageComponent
               {...props}
               source={source}
-              style={[StyleSheet.absoluteFill, imageStyle]}
+              style={Object.assign({}, StyleSheet.absoluteFill, imageStyle)}
             />
             {children}
           </View>
@@ -229,7 +229,7 @@ export const createImageProgress = ImageComponent =>
             onLoad={this.handleLoad}
             onLoadEnd={this.handleLoadEnd}
             source={source}
-            style={[StyleSheet.absoluteFill, imageStyle]}
+            style={Object.assign({}, StyleSheet.absoluteFill, imageStyle)}
           />
           {indicatorElement}
           {children}
