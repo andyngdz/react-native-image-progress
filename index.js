@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ActivityIndicator, Image, StyleSheet, View } from 'react-native';
 
-const styles = StyleSheet.create({
+const styles = {
   centered: {
     ...StyleSheet.absoluteFillObject,
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+}
 
 const DefaultIndicator = ActivityIndicator;
 
